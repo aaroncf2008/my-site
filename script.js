@@ -1,8 +1,9 @@
 var input = document.getElementById("terminalinput");
-const commands = ["help", "portfolio"];
+const commands = ["help", "portfolio", "resume", "contact"];
 
 var definitions = {
     "help": "portfolio - This command links you to my portfolio\nresume - This command links you to my resume",
+    "contact": "Email: aaronfriedtech@gmail.com\nGitHub: aaroncf2008",
 };
 
 input.addEventListener("keyup", function(event) {
@@ -27,6 +28,5 @@ input.addEventListener("keyup", function(event) {
         let description = definitions[input.value];
         span.innerText = description;
     }
-
-  }
+}
 });
