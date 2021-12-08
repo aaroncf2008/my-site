@@ -2,7 +2,7 @@ var input = document.getElementById("terminalinput");
 const commands = ["help", "portfolio", "resume", "contact"];
 
 var definitions = {
-    "help": "portfolio - This command links you to my portfolio\nresume - This command links you to my resume",
+    "help": "Portfolio - This command links you to my portfolio\nResume - This command links you to my resume\n Contact - This commands will list ways to contact me",
     "contact": "Email: aaronfriedtech@gmail.com\nGitHub: aaroncf2008",
 };
 
