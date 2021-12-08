@@ -1,8 +1,9 @@
 var input = document.getElementById("terminalinput");
-const commands = ["help"];
+const commands = ["help", "portfolio"];
 
 var definitions = {
     "help": "this is a help command",
+    "portfolio": "This command will link you to my portfolio (eventually)",
 };
 
 input.addEventListener("keyup", function(event) {
@@ -14,7 +15,7 @@ input.addEventListener("keyup", function(event) {
     var span = document.getElementById("name");
     
     if (commands.includes(input.value) == false){
-        let notfound = 
+        let notfound = `${input.value}: command not found`;
         span.innerText = notfound;
     }
     else {
