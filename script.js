@@ -2,8 +2,7 @@ var input = document.getElementById("terminalinput");
 const commands = ["help", "portfolio"];
 
 var definitions = {
-    "help": "this is a help command",
-    "portfolio": "This command will link you to my portfolio (eventually)",
+    "help": "portfolio - This command links you to my portfolio\nresume - This command links you to my resume",
 };
 
 input.addEventListener("keyup", function(event) {
@@ -17,6 +16,12 @@ input.addEventListener("keyup", function(event) {
     if (commands.includes(input.value) == false){
         let notfound = `${input.value}: command not found`;
         span.innerText = notfound;
+    }
+    else if (input.value == "resume"){
+        window.open("https://pastebin.com/raw/0A9Utp54");
+    }
+    else if (input.value == "portfolio"){
+        window.open("https://pastebin.com/raw/51WzKCdE");
     }
     else {
         let description = definitions[input.value];
