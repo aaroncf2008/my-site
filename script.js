@@ -1,4 +1,4 @@
-var input = document.getElementById("terminalinput");
+var input = document.getElementById("terminal-input");
 const commands = ["help", "portfolio", "resume", "contact"];
 
 var definitions = {
