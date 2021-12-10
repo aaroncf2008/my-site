@@ -17,6 +17,26 @@ p {
     color-scheme: dark;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #3a3a3a;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(29, 29, 29);
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+}
+
 .terminal,
 #terminal-input {
     width: 100%;
