@@ -2,14 +2,13 @@ body {
     background-color: #050513;
 }
 
-p {
+h1 {
     font-family: 'PT Mono', monospace;
     color: white;
 }
 
-h1 {
-    font-family: 'PT Mono', monospace;
-    color: white;
+p {
+    text-align: left;
 }
 
 .terminal,
@@ -27,6 +26,7 @@ h1 {
     flex-direction: column;
 }
 
+.terminal-output,
 #terminal-prompt {
     width: 100%;
     display: flex;

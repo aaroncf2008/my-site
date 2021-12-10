@@ -13,19 +13,26 @@ input.addEventListener("keyup", function(event) {
     event.preventDefault();
     
     var span = document.getElementById("name");
-    
-    if (commands.includes(input.value) == false){
-        let notfound = `${input.value}: command not found`;
-        span.innerText = notfound;
+    let inputval = input.value.toLowerCase();
+    let prefix = "root@aaron:~# " + input.value + "\n";
+    if (commands.includes(inputval) == false){
+        let notfound = prefix + `${input.value}: command not found\n`;
+        console.log(span.innerHTML)
+        let spanval = span.innerHTML.replace("<br>", '\n');
+        console.log(spanval)
+        span.innerText = spanval + notfound;
     }
-    else if (input.value == "resume"){
+    else if (inputval == "resume"){
         window.open("https://pastebin.com/raw/0A9Utp54");
     }
-    else if (input.value == "portfolio"){
+    else if (inputval == "portfolio"){
         window.open("https://pastebin.com/raw/51WzKCdE");
     }
+    else if (inputval == "clear"){
+        span.innerText = "";
+    }
     else {
-        let description = definitions[input.value];
+        let description = definitions[inputval];
         span.innerText = description;
     }
 }
