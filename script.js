@@ -38,9 +38,10 @@ input.addEventListener("keyup", function(event) {
         span.innerText = "";
     }
     else {
+        let spanval = span.innerText.replace("<br>", '\n');
         let prefix = "root@aaron:~# " + input.value + "\n";
         let description = definitions[inputval];
-        span.innerText = prefix + description + "\n";
+        span.innerText = spanval + prefix + description + "\n";
     }
     input.value = "";
 }
